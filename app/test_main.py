@@ -9,7 +9,6 @@ def test_read_root():
     assert response.status_code == 200
     assert response.json() == {"message": "It's alive!"}
 
-
 def test_hello_name_with_world():
     response = client.get("/hello/World")
     assert response.status_code == 200
