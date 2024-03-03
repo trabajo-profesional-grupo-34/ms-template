@@ -28,17 +28,13 @@ jobs:
         run: |
           autopep8 --in-place --recursive .
 
-      - name: Commit changes
+      - name: Pushing changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
           git commit -m "Apply autopep8 formatting"
-        
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git push origin HEAD:dev
 
       - name: Run tests
         run: pytest
