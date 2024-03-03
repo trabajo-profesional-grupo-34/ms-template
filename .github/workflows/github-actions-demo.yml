@@ -30,8 +30,8 @@ jobs:
 
       - name: Pushing changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
           git pull origin HEAD:dev
           git add .
           git commit -m "Apply autopep8 formatting"
