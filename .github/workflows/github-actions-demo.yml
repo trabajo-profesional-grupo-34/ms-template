@@ -32,10 +32,10 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git pull origin dev
+          git pull origin HEAD:dev
           git add .
           git commit -m "Apply autopep8 formatting"
-          git push origin dev
+          git push origin HEAD:dev
 
       - name: Run tests
         run: pytest
