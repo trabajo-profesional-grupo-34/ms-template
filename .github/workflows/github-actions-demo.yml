@@ -30,6 +30,7 @@ jobs:
 
       - name: Pushing changes
         run: |
+          git config pull.rebase false
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git pull origin HEAD:dev
