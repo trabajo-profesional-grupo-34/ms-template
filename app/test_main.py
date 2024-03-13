@@ -18,4 +18,4 @@ def test_hello_name_with_world():
 def test_hello_name_with_alex():
     response = client.get("/hello/Alex")
     assert response.status_code == 200
-    assert response.json() == {"message": "Hello, Alex"}
+    assert response.json() == {"message": "Hello, Alex!"}
