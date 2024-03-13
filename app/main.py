@@ -10,4 +10,4 @@ def read_root():
 
 @app.get("/hello/{name}")
 def hello_name(name: str = "World"):
-    return {"message": f"Hello, {name}!"}
+    return {"message": f"Hello {name}!"}

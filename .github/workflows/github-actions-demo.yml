@@ -2,8 +2,7 @@ name: Pull Request Workflow
 
 on:
   pull_request:
-    branches:
-      - test
+    branches: [ test, prod ]
 
 jobs:
   autopep8_and_test:
